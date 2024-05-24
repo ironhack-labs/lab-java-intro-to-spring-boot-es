@@ -44,10 +44,17 @@ public class PatientController {
         return patientRepository.findByAdmittedBy_Department(department);
     }
 
+    //Esta la dejo añadida porque la veo más util que con el OFF solo ( aunque no sirva para el lab )
     @GetMapping("/admitted-by-status/{status}")
     @ResponseStatus(HttpStatus.OK)
     public List<Patient> getPatientsByAdmittedByStatus(@PathVariable String status) {
         return patientRepository.findByAdmittedBy_Status(status);
+    }
+
+    @GetMapping("/doctors-off")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Patient> getPatientsWithDoctorsOff() {
+        return patientRepository.findByAdmittedBy_Status("OFF");
     }
 
 }

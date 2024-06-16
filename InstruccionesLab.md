@@ -30,7 +30,7 @@ Para esta práctica, deberás crear dos tablas de base de datos y añadir alguno
 
 Employee Table (Tabla de empleados)
 
-| employee_id | department  | name            | status  |
+| employee_id | department  | name            | employeeStatus  |
 | ----------- | ----------- | --------------- | ------- |
 | 356712      | cardiology  | Alonso Flores   | ON_CALL |
 | 564134      | immunology  | Sam Ortega      | ON      |
@@ -61,13 +61,13 @@ Patient Table (Tabla de pacientes)
 
 1. **Obtener todos los médicos** (doctors): Crear una ruta para obtener todos los médicos.
 2. **Obtener médico por ID**: Crear una ruta para obtener un médico por `employee_id`.
-3. **Obtener médicos por estado** (status): Crear una ruta para obtener médicos por `status`.
+3. **Obtener médicos por estado** (employeeStatus): Crear una ruta para obtener médicos por `employeeStatus`.
 4. **Obtener médicos por departamento**: Crear una ruta para obtener médicos por `department`.
 5. **Obtener todos los pacientes**: Crear una ruta para obtener todos los pacientes.
 6. **Obtener paciente por ID**: Crear una ruta para obtener un paciente por `patient_id`.
 7. **Obtener pacientes por rango de fecha de nacimiento**: Crear una ruta para obtener pacientes con fecha de nacimiento dentro de un rango especificado.
 8. **Obtener pacientes por departamento del médico que los admitió**: Crear una ruta para obtener pacientes por el departamento en el que se encuentra el médico que los admitió (por ejemplo, obtener todos los pacientes admitidos por un médico en cardiología).
-9. **Obtener todos los pacientes con un médico cuyo estado es OFF**: Crear una ruta para obtener todos los pacientes con un médico cuyo `status` sea OFF.
+9. **Obtener todos los pacientes con un médico cuyo estado es OFF**: Crear una ruta para obtener todos los pacientes con un médico cuyo `employeeStatus` sea OFF.
 
 <br>
 

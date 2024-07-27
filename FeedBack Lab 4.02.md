@@ -1,6 +1,4 @@
-﻿## Lab 4.02 : Intro to Spring Boot (FeedBack)
-
-Your submitted this lab on  May 31st 2024.
+﻿Your submitted this lab on  May 31st 2024.
 
 **Repository Setup**
 
@@ -69,6 +67,3 @@ Was this feedback useful?
 **Obtener Todos los Pacientes con un Médico de Estado OFF**
 
 Excelente trabajo al implementar la ruta para obtener todos los pacientes con médicos cuyo estado es 'OFF'. Tu consulta está bien escrita y demuestra buen conocimiento de las anotaciones de Spring Data JPA.
-
-Was this feedback useful?
-

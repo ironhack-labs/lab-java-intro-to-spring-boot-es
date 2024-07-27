@@ -1,5 +1,6 @@
 package com.miguelprojects.lab_402_intro_to_spring_boot.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.miguelprojects.lab_402_intro_to_spring_boot.Enums.Status;
 import jakarta.persistence.*;
 import org.hibernate.annotations.DynamicUpdate;
@@ -22,17 +23,18 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-//    @OneToMany(mappedBy = "doctor")
-//    private List<Patient> patientList;
+    @JsonIgnore
+    @OneToMany(mappedBy = "doctor")
+    private List<Patient> patientList;
 
     public Employee() {    }
 
-    public Employee(Long employeeId, String department, String name, Status status/*, List<Patient> patientList*/) {
+    public Employee(Long employeeId, String department, String name, Status status, List<Patient> patientList) {
         this.employeeId = employeeId;
         this.department = department;
         this.name = name;
         this.status = status;
-    //    this.patientList = patientList;
+        this.patientList = patientList;
     }
 
     public Long getEmployeeId() {
@@ -67,24 +69,24 @@ public class Employee {
         this.status = status;
     }
 
-//    public List<Patient> getPatientList() {
-//        return patientList;
-//    }
-//
-//    public void setPatientList(List<Patient> patientList) {
-//        this.patientList = patientList;
-//    }
+    public List<Patient> getPatientList() {
+        return patientList;
+    }
+
+    public void setPatientList(List<Patient> patientList) {
+        this.patientList = patientList;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return Objects.equals(employeeId, employee.employeeId) && Objects.equals(department, employee.department) && Objects.equals(name, employee.name) && status == employee.status /*&& Objects.equals(patientList, employee.patientList)*/;
+        return Objects.equals(employeeId, employee.employeeId) && Objects.equals(department, employee.department) && Objects.equals(name, employee.name) && status == employee.status && Objects.equals(patientList, employee.patientList);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(employeeId, department, name, status/*, patientList*/);
+        return Objects.hash(employeeId, department, name, status, patientList);
     }
 }

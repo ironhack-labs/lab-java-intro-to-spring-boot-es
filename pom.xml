@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.miguelProjects</groupId>
-    <artifactId>Lab_4-02_Intro_To_Spring_Boot</artifactId>
+    <artifactId>Lab_4-04_Add_And_Update</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Lab_4-02_Intro_To_Spring_Boot</name>
     <description>Lab_4-02_Intro_To_Spring_Boot</description>

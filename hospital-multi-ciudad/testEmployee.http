@@ -1,0 +1,46 @@
+###
+GET http://localhost:8080/api/employees/356712
+
+
+###
+GET http://localhost:8080/api/employees/
+
+
+
+###
+POST http://localhost:8080/api/employees/
+Content-Type: application/json
+
+{
+  "id": 111111,
+  "name": "Álvaro Wau",
+  "status": "ON_CALL",
+  "department": "cardiology"
+}
+
+<> 2024-10-19T165206.201.json
+
+
+
+###
+DELETE http://localhost:8080/api/employees/111111
+
+###
+PUT http://localhost:8080/api/employees/111111
+Content-Type: application/json
+
+{
+  "name": "Álvaro Wau",
+  "status": "OFF",
+  "department": "cardiology"
+}
+
+
+
+###
+GET http://localhost:8080/api/employees/status/ON
+
+
+###
+GET http://localhost:8080/api/employees/department/immunology
+

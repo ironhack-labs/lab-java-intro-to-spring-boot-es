@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/employees")
@@ -18,6 +19,13 @@ public class EmployeeController {
     @GetMapping
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
+    }
+
+    // Get employee by ID
+    @GetMapping("/{id}")
+    public Employee getEmployeeById(@PathVariable Long id) {
+        return employeeRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Employee not found with ID: " + id));
     }
 
     // Get employees by status
